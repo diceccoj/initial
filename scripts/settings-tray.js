@@ -26,7 +26,7 @@ if(!localStorage.getItem("theme")) {
 
 //change startup settings based on localStorage (dark/center are default)
 if(localStorage.getItem("theme") == "light") {
-    for(i=0; i<5; i++) {
+    for(let i=0; i<5; i++) {
         widgets[i].classList.add("widget-light");
     }
     theme.value = "light";
@@ -42,13 +42,13 @@ if(localStorage.getItem("layout") == "left") {
 //dark/light theme
 theme.addEventListener("change", () => {
     if (theme.value == "dark") {
-        for(i=0; i<5; i++) {
+        for (let i=0; i<5; i++) {
             widgets[i].classList.remove("widget-light");
         }
         localStorage.setItem("theme", "dark");
     }
     else {
-        for(i=0; i<5; i++) {
+        for(let i=0; i<5; i++) {
             widgets[i].classList.add("widget-light");
         }
         localStorage.setItem("theme", "light");
