@@ -44,18 +44,19 @@ body  {
 
 section {
   position: fixed;
-  top:50%;  /**45/15 for left layout**/
+  top:50%;  
   left:50%;
   transform: translate(-50%, -50%);
 }
 
 #main-section {
-  position: inherit;
-  transform: translate(40%, 30%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
 
 .main-section-left-layout {
-  transform: translate(-40%, -42%);
+  transform: translate(60%, 55%);
 }
 
 

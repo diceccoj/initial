@@ -33,6 +33,7 @@ if(localStorage.getItem("theme") == "light") {
 }
 
 if(localStorage.getItem("layout") == "left") {
+    mainsection.style.position = "inherit";
     widgetbody.classList.remove("even-columns");
     widgetbody.classList.add("main-section-left-layout");
     weatherapp.classList.add("weather-app-left-layout");
@@ -58,12 +59,14 @@ theme.addEventListener("change", () => {
 //widget alignment
 layout.addEventListener("change", () => {
     if (layout.value == "center") {
+        mainsection.style.position = "fixed";
         widgetbody.classList.add("even-columns");
         widgetbody.classList.remove("main-section-left-layout");
         weatherapp.classList.remove("weather-app-left-layout");
         localStorage.setItem("layout", "center");
     }
     else {
+        mainsection.style.position = "inherit";
         widgetbody.classList.remove("even-columns");
         widgetbody.classList.add("main-section-left-layout");
         weatherapp.classList.add("weather-app-left-layout");
